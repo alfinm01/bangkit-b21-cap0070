@@ -32,7 +32,7 @@ def detect_text():
         ]
     }
     response = requests.post("https://vision.googleapis.com/v1/images:annotate?key=" + API_KEY, data=json.dumps(payload, indent=2)).json()
-    if response["responses"] and response["responses"][0]["textAnnotations"]:
+    if "responses" in response and "textAnnotations" in response["responses"][0]:
         return json.dumps({ "status_code": 200, "data": response["responses"][0]["textAnnotations"][0] })
     return json.dumps({ "status_code": 200, "message": "did not found specific annotation", "data": response })
 
