@@ -67,6 +67,8 @@ def predict():
     print(request.files)
     if "image" not in request.files:
         return json.dumps({ "status_code": 400, "message": "please provide an image file" }), 400
+    print("logging request[\"files\"][\"image\"]...")
+    print(request.files["image"])
     image = request.files["image"].read()
     image = Image.open(io.BytesIO(image))
     image = prepare_image(image, target=(150, 150))
