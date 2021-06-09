@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "nutrition-analyzer-b21-cap0070",
+  "private_key_id": "cd67be3fc9c7ff219308ec76d58a6c24431728a0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC2qzUMBQXKDWjT\nLmci/jVHzqvxGpUvIYrEwqx7b+PLx2RSFY0+RJUrwTrDfSMRwhAj06asyyIHRB9o\n6SJVur9I65tLoDEmTjinawpdc2/4AgYZIT8NEXDBzKnZ8xU2w7irVoUs24n+P2ty\nmJxksXPrKoG1gfXLajSQJe/h/gQEr20wuWpF/+R7pS+/DWTfVuWKLFbDVmBvd5DQ\ntmzuB+mCBKXzxeNwdQQ1XFCXB+Ou4RLoe1mcN8O1rTYsk24PL74ks4qATMBqm3em\n5mvV5/JSAKZlZCh7n81B77VA/jvwiLjsaxmt/UYjjf1OTVb5dMBKi0JPu1oW4yBt\nLQDYEGGhAgMBAAECggEAHJBZEzAV36qJIby30/j8S+Y9bM5DVcNg97OZVRQCAvOC\n9HL6SypeSSFGFxuSSEyYSYHnJk39XDWC09zgyZcSIkz1U7YQ+XRx13wdes96SsXG\nPle8jEaV4zgltzcTsiSY0/ILkSAjS+aO3rSOgBBfl/5lmgRgcxaAcan9ANG/vxuL\nw7gupXdQW26+KkeU0h/sFnt8JhlwffEKheV9GE1v4fTZJi1Zi7N+UYuIXbX7eaw1\nL6c+X3PB7jS7CkarYolHTVGqQlMDPR2Ji24SNdH3Be3EAGNhPSHvu7VHMCxBvvxY\nz6nP4Ep1Gt8v8VsHUdxbqN8IllPhMualF465+yPgoQKBgQDf4BqtVCbOfrsOervJ\n80BSfOtBpclr+tay1jli27XzVl8D9Omxxy4C4wdQzEjdEiu/phM1FU6iXb3G2B13\ns3QZObzWx8vyLXR8M3wQ3yO1LkzGTUttI37IxxPScfaBZ43fu6lSxvIBoNUIMVmE\nuJ9TvppqHROhVGQ8qjCggsufIwKBgQDQ4WiFcmYHuv0TQJP5zjFl7Uo1poD/3LVw\nfZXx8hUBLVPRrsKe8xf9zGPwkqGegInJq50mjtnoVsUJbzJ5OdfGufpPTKfWB5Mh\nmMu8/XT6y0CEaXLSHRiApE0gBk0Gy2AsoAEjk9nFegWgkMmjKvV2Ai5cKSaiaF63\nCqJoeuSKawKBgQCcIQVZxes+bWF0yqF2SL+eB2JmKQGc3ZWnqQDiccmlx6GB9+aW\nxgrPlpb+gUl7a3W5NVAF4DMzxt5X81YxqaQZB4wr2bDg11R6XclzVrrnWz/NuBAX\nL/72dOfdBv9b5eUqmAyRHw+dlRWcnhYJGlx7Id08jcSn6VvydtpsxmrNMwKBgE1v\nwzf1uS2UfM3uWu15K4cF+UT6fUhdokYZyMTxYigVjcVmbHBQ3swQQdyl/5SrQmmp\nXZE11EL2KAXfW27lqsDZoZpUaMRH+pux8ZYWwI9ZWom8Lf0HHFZUkuMUcunZ68Wf\na8ysu0cifYORKa979ZPSKy2vc8sxtitVne/t31wRAoGAU3Iyim7uBI3dKF5/AIG/\nllVIA2f3cCDeQ2PTClO6HCSMgMuQ9s6lFoG+u7BLkk/SOG+qhi/aDl4as1AJtLWx\ngJGRIkrBcbqu6KaKe8F/7tg4l1ofML0/GqjOcj+y2/QrNPpbQ5x6novpwbBJ67ns\nmZonSgGIUCZGUqVbZQqISyQ=\n-----END PRIVATE KEY-----\n",
+  "client_email": "service-account@nutrition-analyzer-b21-cap0070.iam.gserviceaccount.com",
+  "client_id": "115180940537310819977",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/service-account%40nutrition-analyzer-b21-cap0070.iam.gserviceaccount.com"
+}
