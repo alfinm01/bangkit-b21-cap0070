@@ -4,6 +4,9 @@ config.py
 __pycache__
 model/
 # nutrition-analyzer-b21-cap0070-cd67be3fc9c7.json
+Python-3.9.1.tgz
+Python-3.9.1/
+bangkit-b21-cap0070-api.wsgi
 
 # Flask stuff:
 instance/
