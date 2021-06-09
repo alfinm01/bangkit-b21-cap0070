@@ -2,6 +2,8 @@
 venv/
 config.py
 __pycache__
+model/
+# nutrition-analyzer-b21-cap0070-cd67be3fc9c7.json
 
 # Flask stuff:
 instance/
