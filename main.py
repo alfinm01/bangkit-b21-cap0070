@@ -61,6 +61,10 @@ def health_check():
 
 @app.route("/predict", methods=["POST"])
 def predict():
+    print("logging request...")
+    print(request)
+    print("logging request[\"files\"]...")
+    print(request.files)
     if "image" not in request.files:
         return json.dumps({ "status_code": 400, "message": "please provide an image file" }), 400
     image = request.files["image"].read()
