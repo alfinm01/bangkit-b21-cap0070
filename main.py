@@ -99,9 +99,9 @@ def predict():
     preds = model.predict(image, batch_size=10)
     y_pred_index = np.argsort(preds[0])[-3:]
     set_y_pred_index = set(y_pred_index)
-    print("Top 3 prediction results (index):", y_pred_index)
+    print("\nTop 3 prediction results (index):", y_pred_index)
     result = get_food_data_from_index(y_pred_index)
-    print("Top 3 prediction results:", result)
+    print("\nTop 3 prediction results:", result)
     return json.dumps({ "status_code": 200, "data": result })
 
 @app.route("/detect-text", methods=["POST"])
