@@ -5,6 +5,7 @@ import requests
 import numpy as np
 import pandas as pd
 from PIL import Image
+from flask_cors import CORS
 from flask import Flask, request
 from keras.models import load_model
 from keras.preprocessing.image import img_to_array
@@ -12,6 +13,7 @@ from keras.preprocessing.image import img_to_array
 API_KEY = "AIzaSyCRUguLezAfzQrLM3TiWcQCWIE9q0eiaHc"
 
 app = Flask(__name__)
+CORS(app)
 
 def load_model_global():
     print("load_model_global started...")
