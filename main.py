@@ -1,54 +1,24 @@
 import io
 import json
-# import h5py
-# import gcsfs
 import base64
 import requests
 import numpy as np
 import pandas as pd
 from PIL import Image
+from flask_cors import CORS
 from flask import Flask, request
-from keras.models import load_model #, load_weights
-# from tensorflow.python.lib.io import file_io
+from keras.models import load_model
 from keras.preprocessing.image import img_to_array
 
-GOOGLE_APPLICATION_CREDENTIALS = "nutrition-analyzer-b21-cap0070-cd67be3fc9c7.json"
 API_KEY = "AIzaSyCRUguLezAfzQrLM3TiWcQCWIE9q0eiaHc"
-PROJECT_NAME = 'Nutrition Analyzer'
 
 app = Flask(__name__)
+CORS(app)
 
 def load_model_global():
     print("load_model_global started...")
     global model
     model = load_model("./model/nutrition-analyzer-model.h5")
-    # model = load_model("./model/1_InceptionV3.h5")
-
-    # model = load_model("gs://cap0070-bucket/nutrition-analyzer-model")
-    
-    # model_file = file_io.FileIO('gs://cap0070-bucket/nutrition-analyzer-model', mode='rb')
-    # temp_model_location = './temp_model.h5'
-    # temp_model_file = open(temp_model_location, 'wb')
-    # temp_model_file.write(model_file.read())
-    # temp_model_file.close()
-    # model_file.close()
-    # model = load_model(temp_model_location)
-
-    # model_path = "gs://cap0070-bucket/nutrition-analyzer-model"
-    # FS = gcsfs.GCSFileSystem(project=PROJECT_NAME,
-    #                      token=GOOGLE_APPLICATION_CREDENTIALS)
-    # # with FS.open(model_path, 'rb') as model_file:
-    # model_file = FS.open(model_path, 'rb')
-    # print("entered file system, converting to h5py...")
-    # model_gcs = h5py.File(model_file, 'r')
-    # print("converted to h5py, loading model...")
-    # model = load_model(model_gcs)
-    # print("model loaded, compiling...")
-    # model.compile(loss='binary_crossentropy',
-    #             optimizer='rmsprop',
-    #             metrics=['accuracy'])
-    # model_file.close()
-
     print("load_model_global finished...")
 
 def prepare_image(image, target):
@@ -60,13 +30,13 @@ def prepare_image(image, target):
     image = np.vstack([image])
     return image
 
-def load_dataset():
-    print("load_dataset started...")
+def load_data():
+    print("load_data started...")
     global nutrition_values
-    url = 'https://raw.githubusercontent.com/gabrielilharco/snap-n-eat/master/data/nutrition_values.csv'
+    url = './data/nutrition_values.csv'
     nutrition_values = pd.read_csv(url)
     nutrition_values["product"] = nutrition_values["product_name"].replace(" ", "_", regex=True)
-    print("load_dataset finished...")
+    print("load_data finished...")
 
 def get_food_data_from_index(indexes):
     top3_prediction = []
@@ -99,9 +69,9 @@ def predict():
     preds = model.predict(image, batch_size=10)
     y_pred_index = np.argsort(preds[0])[-3:]
     set_y_pred_index = set(y_pred_index)
-    print("Top 3 prediction results (index):", y_pred_index)
+    print("\nTop 3 prediction results (index):", y_pred_index)
     result = get_food_data_from_index(y_pred_index)
-    print("Top 3 prediction results:", result)
+    print("\nTop 3 prediction results:", result)
     return json.dumps({ "status_code": 200, "data": result })
 
 @app.route("/detect-text", methods=["POST"])
@@ -158,6 +128,5 @@ if __name__ == '__main__':
     print(("* Loading Keras model and Flask starting server..."
         "please wait until server has fully started"))
     load_model_global()
-    load_dataset()
+    load_data()
     app.run(host="0.0.0.0")
-    # app.run(debug=True)
