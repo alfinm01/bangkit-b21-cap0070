@@ -7,8 +7,8 @@ import pandas as pd
 from PIL import Image
 from flask_cors import CORS
 from flask import Flask, request
-from keras.models import load_model
-from keras.preprocessing.image import img_to_array
+from tensorflow.keras.models import load_model
+from tensorflow.keras.preprocessing.image import img_to_array
 
 API_KEY = "AIzaSyCRUguLezAfzQrLM3TiWcQCWIE9q0eiaHc"
 
@@ -135,4 +135,4 @@ if __name__ == '__main__':
         "please wait until server has fully started"))
     load_model_global()
     load_data()
-    app.run(host="0.0.0.0")
+    app.run(host="0.0.0.0", port="80")
