@@ -1,0 +1,15 @@
+Why not use GKE?
+
+1. We still need simple deployment and to reduce cost || and haven't needed autoscaling etc
+2. If then our users have scaled and maybe if we already have more than one service (microservices)
+    then I think we can start to use GKE to utilize autoscaling
+
+Why not use Cloud Run?
+
+1. Haha yes it's more of because I want to experiment further in manual infrastructure management (not just auto like Cloud Run),
+    but in real-life case I think it's maybe better to use Cloud Run for the start
+
+Why on port 5000?
+
+1. Well, it's more because of I didn't have enough time to found out how to configure it because of another deadline
+    and I think it's not very urgent, so yeah I still leave it as it is
